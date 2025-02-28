@@ -1,6 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import 'bootstrap/dist/css/bootstrap.css';
 import "./globals.css";
 import Header from "../components/Header/Header";
+import Hero from "@/components/Hero/Hero";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,6 +27,7 @@ export default function RootLayout({ children }) {
       >
 
       <Header />
+      <Hero />
 
 
         <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">

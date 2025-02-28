@@ -11,7 +11,7 @@ const Header = () => {
   const pathname = usePathname();
   const [darkMode, setDarkMode] = useState(false);
   
-  const toggleDarkMode = (e) => {
+  const toggleDarkMode = () => {
     e.preventDefault();
     setDarkMode(!darkMode);
   };
@@ -27,12 +27,12 @@ const Header = () => {
 
   return (
     <header id="header">
-      <nav className="navvar navbar-expand">
+      <nav className="navbar navbar-expand">
         <div className="container header">
         {/* Logo Container */}
           <div className="navbar-logo">
             <a href="/">
-              <img src="/solidcode_gold_plain.svg" alt="Solid Code - Logo"></img>
+              <img className="logo" src="/solidcode_gold_plain.svg" alt="Solid Code - Logo"></img>
             </a>
           </div>
           {/* Menu Container */}
@@ -45,7 +45,7 @@ const Header = () => {
                     pathname === item.href ? "active" : ""
                   }`}
                 >
-                  {item.label}
+                  {item.title}
                 </a>
               </li>
             ))}
