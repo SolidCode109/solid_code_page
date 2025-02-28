@@ -1,11 +1,17 @@
-import { use, useEffect } from "react";
-import { menuConfig } from "./menuConfig";
+"use client";
+
+import React, { useState, useEffect } from "react";
+import { menuConfig } from "../Header/menuConfig";
+import { usePathname } from "next/navigation";
+
+
+
 
 const Header = () => {
-  const location = useLocation();
+  const pathname = usePathname();
   const [darkMode, setDarkMode] = useState(false);
-
-  const toggleDarkMode = () => {
+  
+  const toggleDarkMode = (e) => {
     e.preventDefault();
     setDarkMode(!darkMode);
   };
@@ -26,7 +32,7 @@ const Header = () => {
         {/* Logo Container */}
           <div className="navbar-logo">
             <a href="/">
-              <img src="/" alt="Solid Code - Logo"></img>
+              <img src="/solidcode_gold_plain.svg" alt="Solid Code - Logo"></img>
             </a>
           </div>
           {/* Menu Container */}
@@ -36,7 +42,7 @@ const Header = () => {
                 <a
                   href={item.href}
                   className={`nav-link ${
-                    location.pathname === item.href ? "active" : ""
+                    pathname === item.href ? "active" : ""
                   }`}
                 >
                   {item.label}
@@ -44,8 +50,33 @@ const Header = () => {
               </li>
             ))}
           </ul>
+          {/* Colour picker Container */}
+          <ul className="navbar-nav icons d-flex align-items-center">
+            <li className="nav-item">
+                <a href="#" onClick={toggleDarkMode} className="nav-link" aria-label={darkMode ? "Zmień na tryb jasny" : "Zmień na tryb ciemny"}>
+                    <span className="iconify">{darkMode ? "light_mode" : "dark_mode"}</span>
+                </a>
+            </li>
+          </ul>
+
+          {/* Navbar onscroll Toggle */}
+          <div className="navbar-toggler scrolled"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasRight">
+            <div className="navbar-header">
+                <div className="content">
+                    <div className="toggler-icon"></div>
+                    <span className="title">Menu</span>
+                </div>
+            </div>
+
+          </div>
+
         </div>
       </nav>
+
     </header>
   );
 };
+
+export default Header;
