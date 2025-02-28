@@ -11,24 +11,24 @@ const Hero = ({
 }) => {
     return(
      <section id="hero" className="hero-section">
-        <div className="container">
-            <div className="row">
-                <div className="col-xs-12 col-sm-12 col-sm-push-10 col-md-7 col-md-push-7">
+        <div className="container mx-auto px-4">
+            <div className="flex flex-wrap">
+                <div className="w-full md:w-7/12 md:order-2">
                     <div className="hero-content">
-                        <h1>{heading}</h1>
+                        <h1 className="text-4xl font-bold">{heading}</h1>
                     </div>
 
-                    <div className="content ">
-                        <p className="sub-title order-first order-md-last">{description}</p>
-                        <a href="/kontakt" className="btn btn-primary">{buttonText}</a> 
+                    <div className="content mt-4">
+                        <p className="sub-title text-lg mb-4">{description}</p>
+                        <a href="/kontakt" className="btn btn-primary bg-blue-500 text-white py-2 px-4 rounded">{buttonText}</a> 
                     </div>
 
                 </div>
             </div>
 
-            <div className="hero-bg">
-                <img className="circle-1" src={bg_img1} alt="Background 1" />
-                <img className="circle-2" src={bg_img2} alt="Background 2" />
+            <div className="hero-bg relative mt-8">
+                <img className="circle-1 absolute top-0 left-0 w-1/2" src={bg_img1} alt="Background 1" />
+                <img className="circle-2 absolute top-0 right-0 w-1/2" src={bg_img2} alt="Background 2" />
             </div>
         </div>
      </section>

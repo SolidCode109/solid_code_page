@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import "./globals.css";
 import Header from "../components/Header/Header";
 import Hero from "@/components/Hero/Hero";
+import Services from "@/components/Services/Services";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,15 +26,12 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-
-      <Header />
-      <Hero />
-
-
-        <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <p>Footer</p>
+        <Header />
+        <Hero />
+        <Services />       
+        <footer className="flex gap-6 flex-wrap items-center justify-center">
+          <p>Footer</p>
         </footer>
-
       </body>
     </html>
   );
