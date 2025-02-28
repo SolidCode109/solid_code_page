@@ -12,7 +12,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #242424;
+    --background: #111013;
     --foreground: #ededed;
   }
 }
@@ -21,6 +21,77 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+header .navbar-expand {
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  padding: 20px 25px;
+  pointer-events: initial;
+}
+
+section#hero {
+  width: 100%;
+  padding: 130px 0;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section .hero-bg {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  inset: 0%;
+  z-index: -1;
+}
+
+.hero-section .hero-bg .circle-1, .hero-section .hero-bg .circle-2 {
+  position: absolute;
+  height: 100vmax;
+  width: 100vmax;
+  object-fit: cover;
+}
+
+.hero-section .hero-bg .circle-1 {
+  -webkit-animation: zoom 20s infinite linear;
+  animation: zoom 20s infinite linear;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.5, 1.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+
+
+.hero-section .hero-bg .circle-2 {
+  -webkit-animation: spinner 20s infinite linear;
+  animation: spinner 20s infinite linear;
+}
+
+@keyframes spinner {
+  100% {
+    -webkit-transform: translate3d(0px, 0px, 0px) rotateZ(-360deg);
+    transform: translate3d(0px, 0px, 0px) rotateZ(-360deg);
+}
+}
+
+.odd .hero-bg .circle-1, .odd .hero-bg .circle-2 {
+  opacity: 0.15;
 }
 
 img.logo{
@@ -34,12 +105,3 @@ li.nav-item {
   margin: 0px;
 }
 
-section#hero {
-  width: 100%;
-  padding: 130px 0;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  position: relative;
-  overflow: hidden;
-}
