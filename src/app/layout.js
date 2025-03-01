@@ -1,5 +1,4 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import 'bootstrap/dist/css/bootstrap.css';
 import "./globals.css";
 import Header from "../components/Header/Header";
 import Hero from "@/components/Hero/Hero";
@@ -27,11 +26,13 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
-        <Hero />
-        <Services />       
-        <footer className="flex gap-6 flex-wrap items-center justify-center">
-          <p>Footer</p>
-        </footer>
+        <div className="container">
+          <Hero />
+          <Services />
+          <footer className="flex gap-6 flex-wrap items-center justify-center">
+            <p>Footer</p>
+          </footer>
+        </div>
       </body>
     </html>
   );

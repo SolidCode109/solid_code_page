@@ -3,33 +3,43 @@ import React from 'react';
 const services =[
     {
         id: "1",
-        title: "Strony internetowe & sklepy e-commerce",
-        description: "Responsywne strony internetowe, zoptymalizowane pod SEO, dopasowane do Twojej branży. Sklepy e-commerce – wydajne i łatwe w obsłudze rozwiązania dla sprzedaży online."
+        title: "Strony internetowe",
+        description: "Responsywne strony internetowe, zoptymalizowane pod SEO, dopasowane do Twojej branży."
     },
     {
         id: "2",
+        title: "Sklepy e-commerce",
+        description: "Sklepy e-commerce – wydajne i łatwe w obsłudze rozwiązania dla sprzedaży online."
+    },
+    {
+        id: "3",
         title: "Indywitualny design",
         description: "Unikalne projekty graficzne zgodne z Twoją identyfikacją wizualną."
     },
     {
-        id: "3",
+        id: "4",
         title: "Hosting i administracja",
         description: "Szybki, bezpieczny serwer z pełnym wsparciem technicznym."
     },
     {
-        id: "4",
-        title: "Optymalizacja SEO i UX",
+        id: "5",
+        title: "Optymalizacja SEO",
         description: "Strategie zwiększające widoczność w Google i poprawiające doświadczenia użytkowników."
-    }
+    },
+    {
+        id: "6",
+        title: "UI/UX ",
+        description: "Lorem"
+    },
 
 ];
 
 const Services = () => {
     return (
-       <div>
+       <div className="inline-grid grid-cols-3 gap-4">
         {services.map((service, index) => (
             <div key={index} className="">
-                <div>
+                <div className="mb-3">
                 <div className="item-count">{service.id}</div>
                         <div className="content">
                             <h4 className="mt-0">{service.title}</h4>
