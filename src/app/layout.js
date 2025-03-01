@@ -1,18 +1,19 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Roboto, Montserrat } from 'next/font/google';
 import "./globals.css";
 import Header from "../components/Header/Header";
 import Hero from "@/components/Hero/Hero";
 import Services from "@/components/Services/Services";
+import Footer from "@/components/Footer/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const roboto = Roboto({
+  variable: "--font-roboto",
   subsets: ["latin"],
-});
+})
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const montserrat = Montserrat({
+  variable: "--font-montserrant",
   subsets: ["latin"],
-});
+})
 
 export const metadata = {
   title: "Create Next App",
@@ -23,15 +24,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${roboto.variable} ${montserrat.variable} antialiased`}
       >
-        <Header />
-        <div className="container">
+        <div className="container mx-auto max-w-8xl">
+          <Header />
           <Hero />
           <Services />
-          <footer className="flex gap-6 flex-wrap items-center justify-center">
-            <p>Footer</p>
-          </footer>
+          <Footer />
         </div>
       </body>
     </html>

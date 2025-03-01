@@ -26,23 +26,23 @@ const Header = () => {
   }, [darkMode]);
 
   return (
-    <header id="header">
-      <nav className="navbar navbar-expand">
-        <div className="container header">
-        {/* Logo Container */}
-          <div className="navbar-logo">
+    <header id="header" className="bg-white dark:bg-gray-800">
+      <nav className="flex items-center justify-between p-4">
+        <div className="container mx-auto flex items-center justify-between">
+          {/* Logo Container */}
+          <div className="flex-shrink-0">
             <a href="/">
-              <img className="logo" src="/solidcode_gold_plain.svg" alt="Solid Code - Logo"></img>
+              <img className="w-auto max-h-24" src="/solidcode_gold_plain.svg" alt="Solid Code - Logo"></img>
             </a>
           </div>
           {/* Menu Container */}
-          <ul className="navbar-nav items d-none d-md-block">
+          <ul className="hidden md:flex space-x-4">
             {menuConfig.map((item, index) => (
-              <li className="nav-item" key={index}>
+              <li key={index}>
                 <a
                   href={item.href}
-                  className={`nav-link ${
-                    pathname === item.href ? "active" : ""
+                  className={`text-gray-800 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 ${
+                    pathname === item.href ? "font-bold" : ""
                   }`}
                 >
                   {item.title}
@@ -51,30 +51,32 @@ const Header = () => {
             ))}
           </ul>
           {/* Colour picker Container */}
-          <ul className="navbar-nav icons d-flex align-items-center">
-            <li className="nav-item">
-                <a href="#" onClick={toggleDarkMode} className="nav-link" aria-label={darkMode ? "Zmień na tryb jasny" : "Zmień na tryb ciemny"}>
-                    <span className="iconify">{darkMode ? "light_mode" : "dark_mode"}</span>
-                </a>
+          <ul className="flex items-center space-x-4">
+            <li>
+              <a
+                href="#"
+                onClick={toggleDarkMode}
+                className="text-gray-800 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400"
+                aria-label={darkMode ? "Zmień na tryb jasny" : "Zmień na tryb ciemny"}
+              >
+                <span className="iconify">{darkMode ? "light_mode" : "dark_mode"}</span>
+              </a>
             </li>
           </ul>
 
           {/* Navbar onscroll Toggle */}
-          <div className="navbar-toggler scrolled"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasRight">
-            <div className="navbar-header">
-                <div className="content">
-                    <div className="toggler-icon"></div>
-                    <span className="title">Menu</span>
-                </div>
+          <div
+            className="md:hidden flex items-center"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasRight"
+          >
+            <div className="flex items-center">
+              <div className="toggler-icon"></div>
+              <span className="ml-2">Menu</span>
             </div>
-
           </div>
-
         </div>
       </nav>
-
     </header>
   );
 };

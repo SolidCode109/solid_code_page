@@ -36,18 +36,21 @@ const services =[
 
 const Services = () => {
     return (
+    <div className="container">
        <div className="inline-grid grid-cols-3 gap-4">
         {services.map((service, index) => (
             <div key={index} className="">
                 <div className="mb-3">
                 <div className="item-count">{service.id}</div>
                         <div className="content">
-                            <h4 className="mt-0">{service.title}</h4>
+                            <h3 className="mt-0">{service.title}</h3>
                             <p>{service.description}</p>
                         </div>
                     </div>
                 </div>
+                
         ))}
+       </div>
        </div>
     );
 };

@@ -1,9 +1,5 @@
 @import "tailwindcss";
 
-@theme {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
 :root {
   --background: #ffffff;
@@ -21,6 +17,14 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-montserrant);
+}
+
+p, a, span {
+  font-family: var(--font-roboto);
 }
 
 header .navbar-expand {
