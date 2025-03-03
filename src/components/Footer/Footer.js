@@ -10,11 +10,11 @@ const Footer = () => {
           <div className="md:flex md:justify-between">
             <div className="mb-6 md:mb-0">
               <img
-                src="/solidcode_gold_plain.svg"
+                src="/solidcode_gold_white.svg"
                 className="w-auto max-h-24"
                 alt="Solid Code - Logo"
               />
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+              <h2 className="mt-6 mb-3 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                 Dane kontaktowe:
               </h2>
               <div className="flex flex-col space-y-4">
