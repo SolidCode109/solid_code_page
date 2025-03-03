@@ -39,8 +39,8 @@ const services = [
 ];
 
 const serviceDetails = {
-    heading: "Rozwiązania napędzające Twój biznes",
-    description: "Rozwiązania napędzające Twój biznes",
+    heading: "Twoja firma, nasza technologia – wspólny sukces!",
+    description: "Niezależnie od tego, czy prowadzisz małą firmę, czy zarządzasz dużym przedsiębiorstwem – pomożemy Ci osiągnąć sukces dzięki sprawdzonym i nowoczesnym narzędziom. Razem tworzymy przyszłość Twojego biznesu!",
     buttonText: "O nas"
 };
 
@@ -48,9 +48,9 @@ const Services = () => {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="flex flex-wrap py-8">
-        <div className="w-full md:w-7/12 md:order-2">
+        <div className="w-full md:w-10/12 md:order-2">
           <div className="hero-content">
-            <h1 className="text-4xl font-bold">{serviceDetails.heading}</h1>
+            <h1 className="text-6xl md:leading-16">{serviceDetails.heading}</h1>
           </div>
 
           <div className="content mt-4">
