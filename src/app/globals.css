@@ -109,3 +109,11 @@ li.nav-item {
   margin: 0px;
 }
 
+.item-count {
+  margin-right: 0.5rem;
+  font-size: 2rem;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  font-family: 'Montserrat';
+}
+

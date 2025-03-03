@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react";
 const Footer = () => {
   return (
     <footer className="">
-        <div className="container">
+        <div className="container mx-auto px-4">
       <div className="w-full p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">

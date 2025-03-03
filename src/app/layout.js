@@ -4,6 +4,9 @@ import Header from "../components/Header/Header";
 import Hero from "@/components/Hero/Hero";
 import Services from "@/components/Services/Services";
 import Footer from "@/components/Footer/Footer";
+import InfoWWW from "@/components/InfoWWW/InfoWWW";
+import InfoDesign from '@/components/InfoDesign/InfoDesign';
+
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -26,10 +29,12 @@ export default function RootLayout({ children }) {
       <body
         className={`${roboto.variable} ${montserrat.variable} antialiased`}
       >
-        <div className="container mx-auto max-w-8xl">
+        <div>
           <Header />
           <Hero />
           <Services />
+          <InfoWWW />
+          <InfoDesign />
           <Footer />
         </div>
       </body>
