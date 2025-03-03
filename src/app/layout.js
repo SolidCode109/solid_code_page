@@ -6,6 +6,7 @@ import Services from "@/components/Services/Services";
 import Footer from "@/components/Footer/Footer";
 import InfoWWW from "@/components/InfoWWW/InfoWWW";
 import InfoDesign from '@/components/InfoDesign/InfoDesign';
+import Testimonials from '@/components/Testimonials/Testimonials';
 
 
 const roboto = Roboto({
@@ -35,6 +36,7 @@ export default function RootLayout({ children }) {
           <Services />
           <InfoWWW />
           <InfoDesign />
+          {/* <Testimonials /> */}
           <Footer />
         </div>
       </body>

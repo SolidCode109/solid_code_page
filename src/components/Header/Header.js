@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 
 
 
+
 const Header = () => {
   const pathname = usePathname();
   const [darkMode, setDarkMode] = useState(false);
@@ -25,16 +26,44 @@ const Header = () => {
     }
   }, [darkMode]);
 
+  useEffect(() => {
+    let prevScrollpos = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
+
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("header").classList.add("sticky");
+      } else {
+        document.getElementById("header").classList.remove("sticky");
+      }
+      prevScrollpos = currentScrollPos;
+
+      if (window.scrollY > 0) {
+        document.getElementById("header").classList.add("sticky_top");
+      } else {
+        document.getElementById("header").classList.remove("sticky", "sticky_top");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <header id="header" className="bg-white dark:bg-gray-800">
+    <header id="header" className="bg-transparent">
       <nav className="flex items-center justify-between p-4">
         <div className="container mx-auto flex items-center justify-between">
           {/* Logo Container */}
           <div className="flex-shrink-0">
             <a href="/">
-              <img className="w-auto max-h-24" src="/solidcode_gold_plain.svg" alt="Solid Code - Logo"></img>
+              <img className="w-auto max-h-24" src="/solidcode_gold_white.svg" alt="Solid Code - Logo"></img>
             </a>
           </div>
+          <div className="mx-auto"></div>
           {/* Menu Container */}
           <ul className="hidden md:flex space-x-4">
             {menuConfig.map((item, index) => (
