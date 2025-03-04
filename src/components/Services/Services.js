@@ -83,7 +83,7 @@ const Services = () => {
         </div>
       </div>
 
-      <div className="inline-grid grid-cols-3 gap-4">
+      <div className="inline-grid gap-4 xl:grid-cols-3  lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
         {services.map((service, index) => (
           <div key={index} className="">
             <div className="flex items-start mb-3">

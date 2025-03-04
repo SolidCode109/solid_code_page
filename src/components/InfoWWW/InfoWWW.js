@@ -36,7 +36,7 @@ const infoWWW = {
 
 const InfoWWW = () => {
 return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-4 md:py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
             <div className="p-4">
                 <img src="/kontakt.webp" alt="Usługi WWW" />
@@ -51,19 +51,19 @@ return (
                 <div className="my-6 space-y-4">
                 <h3 className="text-xl md:text-xl">{infoWWW.list1_Title}</h3>
                 <ul className="flex flex-wrap text-sm font-medium text-gray-700 dark:text-white sm:text-base md:mx-auto md:max-w-screen-s my-3 space-y-2">
-                    <li className="my-1 flex w-1/2 items-center">
+                    <li className="my-1 flex w-full sm:w-1/2 items-center">
                         {infoWWW.icon}
                         {infoWWW.list1_Item0}
                     </li>
-                    <li className="my-1 flex w-1/2 items-center">
+                    <li className="my-1 flex w-full sm:w-1/2 items-center">
                         {infoWWW.icon}
                         {infoWWW.list1_Item1}
                     </li>
-                    <li className="my-1 flex w-1/2 items-center">
+                    <li className="my-1 flex w-full sm:w-1/2 items-center">
                         {infoWWW.icon}
                         {infoWWW.list1_Item2}
                     </li>
-                    <li className="my-1 flex w-1/2 items-center">
+                    <li className="my-1 flex w-full sm:w-1/2 items-center">
                         {infoWWW.icon}
                         {infoWWW.list1_Item3}
                     </li>
@@ -73,19 +73,19 @@ return (
                 <div className="my-6 space-y-4">
                 <h3 className="text-xl md:text-xl">{infoWWW.list2_Title}</h3>
                 <ul className="flex flex-wrap text-sm font-medium text-gray-700 dark:text-white sm:text-base md:mx-auto md:max-w-screen-s my-3 space-y-2">
-                    <li className="my-1 flex w-1/2 items-center">
+                    <li className="my-1 flex w-full sm:w-1/2 items-center">
                         {infoWWW.icon}
                         {infoWWW.list2_Item0}
                     </li>
-                    <li className="my-1 flex w-1/2 items-center">
+                    <li className="my-1 flex w-full sm:w-1/2 items-center">
                         {infoWWW.icon}
                         {infoWWW.list2_Item1}
                     </li>
-                    <li className="my-1 flex w-1/2 items-center">
+                    <li className="my-1 flex w-full sm:w-1/2 items-center">
                         {infoWWW.icon}
                         {infoWWW.list2_Item2}
                     </li>
-                    <li className="my-1 flex w-1/2 items-center">
+                    <li className="my-1 flex w-full sm:w-1/2 items-center">
                         {infoWWW.icon}
                         {infoWWW.list2_Item3}
                     </li>

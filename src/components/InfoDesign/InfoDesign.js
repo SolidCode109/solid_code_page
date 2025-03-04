@@ -31,9 +31,10 @@ const infoDesign = {
 
 const InfoDesign = () => {
 return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-4 md:py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-            <div className="my-auto p-4">
+
+            <div className="my-auto p-4 order-2 md:order-1 sm:order-2">
                 <h2 className="text-2xl mb-8 md:text-3xl">{infoDesign.heading}</h2>
                 <p className="my-6 space-y-4">{infoDesign.description}</p>
 
@@ -59,9 +60,9 @@ return (
                 </ul>
                 </div>
             </div>
-            <div className=" p-4">
+            <div className="p-4 order-1 md:order-2 sm:order-1">
                 <img src="/design.webp" alt="Usługi nowoczesnego designu" />
-            </div>
+        </div>
         </div>
     </div>
 );
