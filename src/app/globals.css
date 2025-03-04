@@ -162,3 +162,33 @@ li.nav-item {
   font-family: 'Montserrat';
 }
 
+.carousel {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+  margin: 2em 0;
+  mask-image: linear-gradient(90deg, #24242400 0%, #000000 15% 85%, #24242400 100%, #050505 272%)
+}
+
+.carousel__track {
+  display: flex;
+  animation: scroll 30s linear infinite;
+  width: max-content;
+}
+
+.carousel__item {
+  flex: none;
+  padding: 0 3em;
+  width: 250px;
+  height: auto;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

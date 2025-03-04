@@ -8,6 +8,7 @@ import InfoWWW from "@/components/InfoWWW/InfoWWW";
 import InfoDesign from '@/components/InfoDesign/InfoDesign';
 import Testimonials from '@/components/Testimonials/Testimonials';
 import InfoSEO from '@/components/InfoSEO/InfoSEO';
+import Carousel from '@/components/Carousel/Carousel';
 
 
 const roboto = Roboto({
@@ -38,6 +39,7 @@ export default function RootLayout({ children }) {
           <InfoWWW />
           <InfoDesign />
           <InfoSEO />
+          <Carousel />
           {/* <Testimonials /> */}
           <Footer />
         </div>
