@@ -9,6 +9,7 @@ import InfoDesign from '@/components/InfoDesign/InfoDesign';
 import Testimonials from '@/components/Testimonials/Testimonials';
 import InfoSEO from '@/components/InfoSEO/InfoSEO';
 import Carousel from '@/components/Carousel/Carousel';
+import Portfolio from '@/components/Portfolio/PortfolioLandingPage';
 
 
 const roboto = Roboto({
@@ -36,6 +37,7 @@ export default function RootLayout({ children }) {
           <Header />
           <Hero />
           <Services />
+          <Portfolio />
           <InfoWWW />
           <InfoDesign />
           <InfoSEO />
