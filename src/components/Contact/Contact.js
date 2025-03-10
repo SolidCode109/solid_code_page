@@ -31,6 +31,10 @@ const Contact = () => {
         <div className="flex justify-between flex-wrap">
           <div className="basic-1/3">
             <h2>Contact form</h2>
+
+
+
+            
           </div>
           <div className="basis-1/3">
 
