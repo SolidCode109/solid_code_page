@@ -214,13 +214,6 @@ li.nav-item {
 
 }
 
-@media screen and (max-width: 981px) {
-  .item--sticky {
-    top: 3em;
-  }
-
-}
-
 .portfolio-content {
   position: absolute;
   left: 0;
@@ -229,4 +222,8 @@ li.nav-item {
   color: var(--white);
   z-index: 1;
   background-color: #0a0a0aa8;
+}
+
+.carousel__item img {
+  filter:contrast(0.5);
 }

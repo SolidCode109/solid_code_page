@@ -1,17 +1,27 @@
-"use client";
-
 import React from "react";
-import MyRoutes from "@/routers/routers";
-import Hero from "@/components/Hero/Hero";
-import Services from "@/components/Services/Services";
+import Header from "../components/Header/Header";
+import Hero from "../components/Hero/Hero";
+import Services from "../components/Services/Services";
+import Footer from "../components/Footer/Footer";
+import InfoWWW from "../components/InfoWWW/InfoWWW";
+import InfoDesign from '../components/InfoDesign/InfoDesign';
+import InfoSEO from '../components/InfoSEO/InfoSEO';
+import Carousel from '../components/Carousel/Carousel';
+import Portfolio from '../components/Portfolio/PortfolioLandingPage';
 
 
 export default function Home() {
   return (
     <div className="main-wrapper">
-      <MyRoutes />
-      <Hero />
-      <Services />
+          <Header />
+          <Hero />
+          <Services />
+          <Portfolio />
+          <InfoWWW />
+          <InfoDesign />
+          <InfoSEO />
+          <Carousel />
+          <Footer />
     </div>
   );
 }

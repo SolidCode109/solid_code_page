@@ -24,7 +24,7 @@ const Footer = () => {
                 </div>
                 <div className="my-1">
                 <h3>Adres email</h3>
-                  <a href="mailto:info@solidcode.pl">info@solidcode.pl</a>
+                  <a href="mailto:info@solid-code.pl">info@solid-code.pl</a>
                 </div>
               </div>
 
