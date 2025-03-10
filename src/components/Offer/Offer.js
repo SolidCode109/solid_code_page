@@ -3,6 +3,50 @@ import React from "react";
 import Link from "next/link";
 
 
+
+const offerList = [
+  {
+    id: "1",
+    title: "Wsparcie techniczne",
+    image: "../phone.svg",
+    description:
+      "Profesjonalne wsparcie techniczne dla stron internetowych, szybka pomoc w rozwiązywaniu problemów i optymalizacji działania.",
+  },
+  {
+    id: "2",
+    title: "Hosting",
+    image: "../phone.svg",
+    description:
+      "Szybki i bezpieczny hosting stron internetowych, gwarantujący stabilność działania i wysoką wydajność.",
+  },
+  {
+    id: "3",
+    title: "Certyfikaty SSL",
+    image: "../phone.svg",
+    description:
+      "Zapewniamy certyfikaty SSL dla Twojej strony, chroniąc dane użytkowników i zwiększając wiarygodność witryny.",
+  },
+  {
+    id: "4",
+    title: "Indywidyalny design UI/UX",
+    image: "../phone.svg",
+    description: "Tworzymy unikalne projekty UI/UX, dopasowane do potrzeb Twojej marki, zapewniające intuicyjną nawigację i pozytywne doświadczenia użytkowników.",
+  },
+  {
+    id: "5",
+    title: "Backupy stron",
+    image: "../phone.svg",
+    description:
+      "Regularne kopie zapasowe stron internetowych, zapewniające bezpieczeństwo danych i łatwe przywracanie w razie awarii.",
+  },
+  {
+    id: "6",
+    title: "Aktualizacja stron",
+    image: "../phone.svg",
+    description: "Profesjonalna aktualizacja stron internetowych, zapewniająca ich bezpieczeństwo, zgodność z najnowszymi standardami i lepszą wydajność.",
+  },
+];
+
 const offerTexts = {
   heading: "Bezpłatna wycena!",
   description:
@@ -64,6 +108,21 @@ const Offer = () => {
         </div>
         </div>
     </div>
+
+
+    <div className="inline-grid gap-4 xl:grid-cols-3  lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+        {offerList.map((service, index) => (
+          <div key={index} className="">
+            <div className="flex items-center justify-center flex-col h-full mb-3 py-6 px-4 bg-[#1b1b1b]">
+            <img className="iconify mdi-light--home w-10 h-auto mb-5" src={service.image} />
+              <div className="content text-center">
+                <h3 className="pb-2.5">{service.title}</h3>
+                <p>{service.description}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
 
         </div>
       </section>
