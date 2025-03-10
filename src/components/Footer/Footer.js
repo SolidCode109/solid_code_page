@@ -1,6 +1,20 @@
-"use client";
+import React from "react";
 
-import React, { useState, useEffect } from "react";
+
+const contactDetails = [
+  {
+    id: "0",
+    numer: "+48 660 171 298",
+    image: "/phone.svg",
+    alt: "Numer kontaktowy",
+  },
+  {
+    id: "1",
+    email: "info@solid-code.pl",
+    image: "/email.svg",
+    alt: "Email kontaktowy",
+  },
+];
 
 const Footer = () => {
   return (
