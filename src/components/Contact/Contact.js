@@ -19,6 +19,15 @@ const Contact = () => {
   return (
     <section id="contact" className="contact-section">
       <div className="container mx-auto px-4">
+
+
+      <div className="flex flex-wrap items-center h-64 bg-linear-65">
+            <div className="hero-content">
+              <h1 className="text-6xl font-bold">Kontakt</h1>
+            </div>
+        </div>
+
+
         <div className="flex justify-between flex-wrap">
           <div className="basic-1/3">
             <h2>Contact form</h2>
