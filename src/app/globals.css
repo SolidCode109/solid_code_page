@@ -176,12 +176,13 @@ li.nav-item {
   display: flex;
   animation: scroll 30s linear infinite;
   width: max-content;
+  align-items: center;
 }
 
 .carousel__item {
   flex: none;
   padding: 0 3em;
-  width: 250px;
+  width: 225px;
   height: auto;
 }
 
@@ -222,8 +223,4 @@ li.nav-item {
   color: var(--white);
   z-index: 1;
   background-color: #0a0a0aa8;
-}
-
-.carousel__item img {
-  filter:contrast(0.5);
 }
