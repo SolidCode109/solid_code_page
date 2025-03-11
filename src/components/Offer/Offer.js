@@ -69,16 +69,16 @@ const offerWhyUs = {
 
 
 const offerProcess = {
-  heading: "Dlaczego warto zaufać nam?",
+  heading: "Kroki współpracy",
   description: "Lorem",
-  firstHeading: "Tworzymy Strony Bez Użycia Szablonów",
-  firstDescription: "Każda strona tworzona jest od podstaw, bez szablonów, z dbałością o detale, estetykę i cele biznesowe, idealnie dopasowana do potrzeb Twojej firmy.",
-  secondHeading: "Bogaty stack technologiczny",
-  secondDescription: "Wykorzystujemy szeroki stack technologiczny – WordPress, Laravel, React i Next.js – by tworzyć nowoczesne, wydajne i SEO-friendly strony",
-  thirdHeading: "Współpracujemy z klientami z całej Europy",
-  thirdDescription: "Współpracujemy z klientami z Europy, realizując ponad 200 stron w Irlandii. Łączymy doświadczenie, innowacyjne podejście i dbałość o SEO.",
-  fourthHeading: "Gwarancja na lata",
-  fourthDesctipion: "Zapewniamy gwarancję na każdą wykonaną stronę oraz stałe wsparcie techniczne, by Twoja witryna działała niezawodnie przez lata."
+  firstHeading: "1. Indywidualna Rozmowa i Ocena Wymagań Klienta",
+  firstDescription: "Na początku współpracy przeprowadzamy szczegółową rozmowę, aby poznać potrzeby i oczekiwania klienta. Analizujemy branżę, grupę docelową oraz cele, jakie ma spełniać strona internetowa.",
+  secondHeading: "2. Wycena Projektu",
+  secondDescription: "Na podstawie zebranych informacji przygotowujemy indywidualną wycenę projektu. Przedstawiamy szczegółowy kosztorys, uwzględniając wszystkie kluczowe elementy strony, takie jak liczba podstron, funkcjonalności czy dodatkowe usługi SEO.",
+  thirdHeading: "3. Stworzenie Designu Strony i Konsultacja z Klientem",
+  thirdDescription: "Tworzymy unikalny projekt graficzny strony, dbając o estetykę, funkcjonalność i intuicyjność nawigacji. Każdy etap designu konsultujemy z klientem, aby dostosować wygląd strony do jego wizji i oczekiwań.",
+  fourthHeading: "4. Wykonanie Projektu i Konsultacje na Każdym Etapie Pracy",
+  fourthDesctipion: "Przystępujemy do realizacji projektu, regularnie informując klienta o postępach. Każdy etap pracy jest omawiany i konsultowany, co umożliwia wprowadzanie bieżących zmian zgodnych z preferencjami klienta."
 };
 
 const Offer = () => {
@@ -151,6 +151,7 @@ const Offer = () => {
           ))}
         </div>
 
+        
 
         <div className="container mx-auto px-4 py-4 md:py-8">
         <div className="flex">
@@ -186,7 +187,7 @@ const Offer = () => {
         </div>
     </div>
 
-
+    <hr className="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:via-neutral-400" />
 
     <div className="container mx-auto px-4 py-4 md:py-8">
         <div className="flex">
