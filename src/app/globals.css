@@ -81,6 +81,32 @@ header .navbar-expand {
   pointer-events: initial;
 }
 
+#offer_banner, #contact_banner{
+  width: 100%;
+  padding: 125px 0;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  background-image: url(/oferta.webp);
+}
+
+#offer_banner{
+  background-image: url(/ofertaBanner.webp);
+}
+
+#contact_banner{
+  background-image: url(/kontaktBanner.webp);
+}
+
+@media screen and (max-width:768px){
+  #offer_banner, #contact_banner{
+    padding: 2% 0;
+    background-image: url(/bannerMobileBackground.webp);
+  }
+}
+
 section#hero {
   width: 100%;
   padding: 250px 0;

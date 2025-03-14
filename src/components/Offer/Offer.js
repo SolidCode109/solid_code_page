@@ -5,7 +5,6 @@ import InfoSEO from "../InfoSEO/InfoSEO";
 import InfoDesign from "../InfoDesign/InfoDesign";
 import InfoWWW from "../InfoWWW/InfoWWW";
 
-
 const offerList = [
   {
     id: "1",
@@ -95,13 +94,17 @@ const offerProcess = {
 const Offer = () => {
   return (
     <section id="contact" className="contact-section">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-wrap items-center h-64 bg-linear-65">
-          <div className="hero-content">
-            <h1 className="text-6xl font-bold">Oferta</h1>
+      <div id="offer_banner">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap items-center h-64 bg-linear-65">
+            <div className="hero-content">
+              <h1 className="text-6xl font-bold">Oferta</h1>
+            </div>
           </div>
         </div>
+      </div>
 
+      <div className="container mx-auto px-4">
         <div className="container mx-auto px-4 py-4 md:py-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
             <div className="my-auto p-4 order-2 md:order-1 sm:order-2">
@@ -163,15 +166,15 @@ const Offer = () => {
         </div>
 
         <div className="container mx-auto px-4 py-4 md:py-8">
-          <div className="flex">
-            <div className="flex-1/3 p-1 order-2 md:order-1 sm:order-2">
+          <div className="flex flex-col md:flex-row">
+            <div className="flex-1 md:basis-1/3 p-1">
               <h2 className="text-2xl mb-8 md:text-3xl sticky top-2.5">
                 {offerWhyUs.heading}
               </h2>
             </div>
-            <div className="flex-2/3 p-4 order-1 md:order-2 sm:order-1">
+            <div className="flex-1 md:basis-2/3 p-4">
               <div className="">
-                <div className="grid grid-cols-2 grid-rows-2 gap-8">
+                <div className="grid grid-cols-1 grid-rows-2 md:grid-cols-2 gap-8">
                   <div className="relative px-3">
                     <h3 className="mb-2.5">{offerWhyUs.firstHeading}</h3>
                     <p>{offerWhyUs.firstDescription}</p>
@@ -202,15 +205,15 @@ const Offer = () => {
         <hr className="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:via-neutral-400" />
 
         <div className="container mx-auto px-4 py-4 md:py-8">
-          <div className="flex">
-            <div className="flex-1/3 p-1 order-2 md:order-1 sm:order-2">
+          <div className="flex flex-col md:flex-row">
+            <div className="flex-1 md:basis-1/3 p-1">
               <h2 className="text-2xl mb-8 md:text-3xl sticky top-2.5">
                 {offerProcess.heading}
               </h2>
             </div>
-            <div className="flex-2/3 p-4 order-1 md:order-2 sm:order-1">
+            <div className="flex-1 md:basis-2/3 p-4">
               <div className="">
-                <div className="grid grid-cols-2 grid-rows-2 gap-8">
+                <div className="grid grid-cols-1 grid-rows-2 md:grid-cols-2 gap-8">
                   <div className="relative px-3">
                     <h3 className="mb-2.5">{offerProcess.firstHeading}</h3>
                     <p>{offerProcess.firstDescription}</p>
@@ -220,7 +223,6 @@ const Offer = () => {
                   <div className="relative px-3">
                     <h3 className="mb-2.5">{offerProcess.secondHeading}</h3>
                     <p>{offerProcess.secondDescription}</p>
-                  
                   </div>
 
                   <div className="relative px-3">
@@ -232,7 +234,6 @@ const Offer = () => {
                   <div className="relative px-3">
                     <h3 className="mb-2.5">{offerProcess.fourthHeading}</h3>
                     <p>{offerProcess.fourthDesctipion}</p>
-            
                   </div>
                 </div>
               </div>
@@ -240,9 +241,9 @@ const Offer = () => {
           </div>
         </div>
       </div>
-      < InfoWWW />
-      < InfoDesign />
-      < InfoSEO />
+      <InfoWWW />
+      <InfoDesign />
+      <InfoSEO />
     </section>
   );
 };
