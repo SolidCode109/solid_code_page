@@ -126,7 +126,7 @@ const Header = () => {
 
           <button
             id="toggleButton"
-            className="visible md:invisible bg-indigo-500 text-white px-4 py-2 rounded"
+            className="visible md:invisible text-white px-4 py-2"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
