@@ -151,7 +151,7 @@ const Header = () => {
 
       <div
         id="cardContainer"
-        className="fixed top-0 right-0 h-screen w-0 overflow-hidden bg-black bg-opacity-75 backdrop-blur-lg shadow-lg transition-all duration-300 z-50"
+        className="fixed top-0 right-0 h-screen w-0 overflow-hidden bg-black bg-opacity-75 backdrop-blur-lg shadow-lg transition-all duration-300 z-50 visible md:invisible"
       >
         <button
           id="closeButton"
