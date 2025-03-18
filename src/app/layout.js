@@ -1,5 +1,6 @@
 import { Roboto, Montserrat } from 'next/font/google';
 import "./globals.css";
+import { Providers } from './providers';
 
 
 const roboto = Roboto({
@@ -19,11 +20,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${roboto.variable} ${montserrat.variable} antialiased`}
       >
+        <Providers>
         {children}
+        </Providers>
       </body>
     </html>
   );

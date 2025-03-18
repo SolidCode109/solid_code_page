@@ -3,24 +3,10 @@
 import React, { useState, useEffect } from "react";
 import { menuConfig } from "../Header/menuConfig";
 import { usePathname } from "next/navigation";
+import ThemeSwitch from "../ThemeSwitch/ThemeSwitch";
 
 const Header = () => {
   const pathname = usePathname();
-  const [darkMode, setDarkMode] = useState(false);
-
-  const toggleDarkMode = () => {
-    e.preventDefault();
-    setDarkMode(!darkMode);
-  };
-
-  useEffect(() => {
-    const body = document.body;
-    if (darkMode) {
-      body.classList.add("dark");
-    } else {
-      body.classList.remove("dark");
-    }
-  }, [darkMode]);
 
   useEffect(() => {
     let prevScrollpos = window.scrollY;
@@ -106,22 +92,10 @@ const Header = () => {
             ))}
           </ul>
           {/* Colour picker Container */}
-          <ul className="flex items-center space-x-4">
-            <li>
-              <a
-                href="#"
-                onClick={toggleDarkMode}
-                className="text-gray-800 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400"
-                aria-label={
-                  darkMode ? "Zmień na tryb jasny" : "Zmień na tryb ciemny"
-                }
-              >
-                <span className="iconify">
-                  {darkMode ? "light_mode" : "dark_mode"}
-                </span>
-              </a>
-            </li>
-          </ul>
+
+
+          {typeof window !== 'undefined' && <ThemeSwitch />}
+
 
           {/* Navbar onscroll Toggle */}
 
