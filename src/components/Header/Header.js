@@ -24,6 +24,7 @@ const Header = () => {
 
   useEffect(() => {
     let prevScrollpos = window.scrollY;
+    const cardContainer = document.getElementById("cardContainer");
 
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
@@ -32,6 +33,7 @@ const Header = () => {
         document.getElementById("header").classList.add("sticky");
       } else {
         document.getElementById("header").classList.remove("sticky");
+        cardContainer.classList.remove("offcanvas--visible");
       }
       prevScrollpos = currentScrollPos;
 
@@ -57,12 +59,11 @@ const Header = () => {
     const closeButton = document.getElementById("closeButton");
 
     const handleToggleClick = () => {
-      cardContainer.style.width =
-        cardContainer.style.width === "350px" ? "0" : "350px";
+      cardContainer.classList.add("offcanvas--visible");
     };
 
     const handleCloseClick = () => {
-      cardContainer.style.width = "0";
+      cardContainer.classList.remove("offcanvas--visible");
     };
 
     toggleButton.addEventListener("click", handleToggleClick);
@@ -150,7 +151,7 @@ const Header = () => {
 
       <div
         id="cardContainer"
-        className="fixed top-0 right-0 h-full w-0 overflow-hidden bg-black bg-opacity-75 backdrop-blur-lg shadow-lg transition-all duration-300"
+        className="fixed top-0 right-0 h-screen w-0 overflow-hidden bg-black bg-opacity-75 backdrop-blur-lg shadow-lg transition-all duration-300 z-50"
       >
         <button
           id="closeButton"
@@ -172,7 +173,7 @@ const Header = () => {
           </svg>
         </button>
 
-        <div className="w-full h-screen px-8 py-16 relative">
+        <div className="w-full h-full px-8 py-16 relative">
           <div className="w-full h-auto flex flex-col gap-y-1 mt-6">
             {/* Menu Container */}
             <ul className="flex-col space-x-4">
